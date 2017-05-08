@@ -1,0 +1,17 @@
+{
+    "name": "ming/mf2",
+    "authors": [
+        {
+            "name": "unclehong",
+            "email": "freekeywords@163.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Libs\\" : "libs/"
+        }
+    }
+}
