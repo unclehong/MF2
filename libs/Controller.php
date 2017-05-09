@@ -9,16 +9,9 @@
 namespace Libs;
 
 use Libs\Http\ControllerInterface;
-use Libs\Http\RequestInterface;
 
 class Controller implements ControllerInterface
 {
-    public $req;
-
-    public function __construct(RequestInterface $request)
-    {
-        $this->req = $request;
-    }
 
 }
 

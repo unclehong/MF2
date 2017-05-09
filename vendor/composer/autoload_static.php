@@ -18,6 +18,10 @@ class ComposerStaticInit7e63bc29c1c3487a608d82bdf86380aa
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Translation\\' => 30,
         ),
+        'M' => 
+        array (
+            'MF\\' => 3,
+        ),
         'L' => 
         array (
             'Libs\\' => 5,
@@ -43,6 +47,10 @@ class ComposerStaticInit7e63bc29c1c3487a608d82bdf86380aa
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'MF\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Libs\\' => 
         array (

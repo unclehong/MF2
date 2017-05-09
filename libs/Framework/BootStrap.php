@@ -8,14 +8,9 @@
 
 namespace Libs\Framework;
 
-use Libs\Controller;
-use Libs\Request;
-
 class BootStrap
 {
     public function test()
     {
-        $ctl = new Controller(new Request());
-        $ctl->req->testrequest();
     }
 }

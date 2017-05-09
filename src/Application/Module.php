@@ -3,11 +3,11 @@
  * Created by PhpStorm.
  * User: ming
  * Date: 17-5-9
- * Time: 上午9:06
+ * Time: 下午5:57
  */
 
-namespace Libs\Http;
+namespace MF\Application;
 
-interface ControllerInterface
+class Module
 {
 }

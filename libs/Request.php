@@ -12,8 +12,4 @@ use Libs\Http\RequestInterface;
 
 class Request implements RequestInterface
 {
-    public function testrequest()
-    {
-        echo 'adfasdfasdf';
-    }
 }
