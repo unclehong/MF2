@@ -8,5 +8,5 @@
 
 
 $boot = new \Libs\Framework\BootStrap();
-
+$boot->test();
 return $boot;

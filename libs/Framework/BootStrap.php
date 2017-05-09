@@ -8,11 +8,14 @@
 
 namespace Libs\Framework;
 
+use Libs\Controller;
+use Libs\Request;
+
 class BootStrap
 {
-    //注册HTTP对象
-    static public function registerHttp()
+    public function test()
     {
-
+        $ctl = new Controller(new Request());
+        $ctl->req->testrequest();
     }
 }

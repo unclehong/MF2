@@ -10,5 +10,8 @@ namespace Libs\Factory;
 
 class ControllerFactory
 {
-
+    static public function make($class)
+    {
+        return new $class;
+    }
 }
