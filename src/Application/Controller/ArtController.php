@@ -17,4 +17,10 @@ class ArtController extends Controller
         return $this->success();
         //return 'this is the art test';
     }
+
+    public function test_render()
+    {
+        $this->assign('content',['username' => 'mingming','password' => 'pass4mingming']);
+        return $this->render('user/index');
+    }
 }
