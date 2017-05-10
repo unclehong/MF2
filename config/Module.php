@@ -13,5 +13,6 @@ class Module
     static public function getModules()
     {
         \MF\Application\Module::createController();
+        \MF\Admin\Module::createController();
     }
 }

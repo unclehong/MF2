@@ -24,20 +24,25 @@ class BootStrap
         {
             $arr = explode('/',$_SERVER['PATH_INFO']);$m = $arr[1];$c = $arr[2];$a = $arr[3];
 
-            //加载数据库配置
 
-            Register::bind('capsule',ModelFactory::make(Capsule::class));
-            $capsule = Register::get('capsule');
-            $capsule->addConnection(Database::getDatabase());
-            $capsule->bootEloquent();
-
-            //加载配置
-            \Config\Module::getModules();
-            $m = Register::get($m.'_'.$c);
-
-            call_user_func(function($result){
-                exit($result);
-            },$m->$a());
+        }else
+        {
+            $m = 'admin';$c='frame';$a='index';
         }
+
+        //加载数据库配置
+
+        Register::bind('capsule',ModelFactory::make(Capsule::class));
+        $capsule = Register::get('capsule');
+        $capsule->addConnection(Database::getDatabase());
+        $capsule->bootEloquent();
+
+        //加载配置
+        \Config\Module::getModules();
+        $m = Register::get($m.'_'.$c);
+
+        call_user_func(function($result){
+            exit($result);
+        },$m->$a());
     }
 }

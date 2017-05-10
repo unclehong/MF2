@@ -38,9 +38,13 @@ class Controller extends ControllerInterface
     {
         extract($this->assign());
 
-        $m = 'app';
         if($_SERVER['PATH_INFO'])
+        {
             $arr = explode('/',$_SERVER['PATH_INFO']);$m = $arr[1];
+        }else
+        {
+            $m = 'admin';
+        }
 
         include BASEPATH . '/../src/'.ucfirst($m).'/View/'.$viewpath.'.php';
     }

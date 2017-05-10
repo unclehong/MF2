@@ -10,5 +10,5 @@ namespace Libs\Http;
 
 interface MiddlewareInterface
 {
-
+    public function handle();
 }
