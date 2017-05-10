@@ -10,5 +10,8 @@ namespace Libs\Factory;
 
 class ModelFactory
 {
-
+    static public function make($class)
+    {
+        return new $class;
+    }
 }

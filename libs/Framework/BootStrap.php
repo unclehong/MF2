@@ -9,13 +9,14 @@
 namespace Libs\Framework;
 
 use Config\Database;
+use Libs\Factory\ModelFactory;
 use Libs\Register;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 class BootStrap
 {
     /**
-     * 加载控制器
+     * 启动控制器
      */
     public function boot()
     {
@@ -27,7 +28,9 @@ class BootStrap
             $a = $arr[3];
 
             //加载数据库配置
-            $capsule = new Capsule();
+
+            Register::bind('capsule',ModelFactory::make(Capsule::class));
+            $capsule = Register::get('capsule');
             $capsule->addConnection(Database::getDatabase());
             $capsule->bootEloquent();
 

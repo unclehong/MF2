@@ -18,5 +18,14 @@ class User extends Model
     public function findUser()
     {
         var_dump($this->get());
+
+        echo '------------------'.'<br />';
+        var_dump($this->where('id','<',1000)->get());
+    }
+
+    public function getUser()
+    {
+        echo '------------------'.'<br />';
+        var_dump($this->where('id','<',1000)->get());
     }
 }
