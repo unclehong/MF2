@@ -8,7 +8,9 @@
 
 namespace Libs\Framework;
 
+use Config\Database;
 use Libs\Register;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class BootStrap
 {
@@ -23,6 +25,11 @@ class BootStrap
             $m = $arr[1];
             $c = $arr[2];
             $a = $arr[3];
+
+            //加载数据库配置
+            $capsule = new Capsule();
+            $capsule->addConnection(Database::getDatabase());
+            $capsule->bootEloquent();
 
             //加载配置
             \Config\Module::getModules();

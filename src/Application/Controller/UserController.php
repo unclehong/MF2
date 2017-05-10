@@ -8,10 +8,13 @@
 
 namespace MF\Application\Controller;
 
+use MF\Application\Model\User;
+
 class UserController
 {
     public function test()
     {
-        echo 'asfasfasfdasfd';
+        $user_model = new User();
+        $user_model->findUser();
     }
 }
