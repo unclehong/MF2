@@ -6,7 +6,5 @@
  * Time: 下午8:08
  */
 
-
 $boot = new \Libs\Framework\BootStrap();
-$boot->test();
 return $boot;

@@ -12,7 +12,8 @@
     "autoload" : {
         "psr-4" : {
             "Libs\\" : "libs/",
-            "MF\\" : "src/"
+            "MF\\" : "src/",
+            "Config\\" : "config/"
         }
     }
 }

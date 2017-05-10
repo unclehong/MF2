@@ -13,5 +13,6 @@ define('BASEPATH',__DIR__);
 require BASEPATH . '/../vendor/autoload.php';
 
 $boot = require_once BASEPATH. '/../bootstrap/boot.php';
+$boot->boot();
 
 
