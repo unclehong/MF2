@@ -14,6 +14,7 @@ class ArtController extends Controller
 {
     public function test()
     {
-        echo 'this is the art test';
+        return $this->success();
+        //return 'this is the art test';
     }
 }

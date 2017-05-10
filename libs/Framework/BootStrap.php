@@ -18,14 +18,11 @@ class BootStrap
     /**
      * 启动控制器
      */
-    public function boot()
+    static public function boot()
     {
         if($_SERVER['PATH_INFO'])
         {
-            $arr = explode('/',$_SERVER['PATH_INFO']);
-            $m = $arr[1];
-            $c = $arr[2];
-            $a = $arr[3];
+            $arr = explode('/',$_SERVER['PATH_INFO']);$m = $arr[1];$c = $arr[2];$a = $arr[3];
 
             //加载数据库配置
 
@@ -37,7 +34,10 @@ class BootStrap
             //加载配置
             \Config\Module::getModules();
             $m = Register::get($m.'_'.$c);
-            $m->$a();
+
+            call_user_func(function($result){
+                exit($result);
+            },$m->$a());
         }
     }
 }

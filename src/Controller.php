@@ -11,7 +11,7 @@ namespace MF;
 use Libs\Http\ControllerInterface;
 use Libs\Response;
 
-class Controller implements ControllerInterface
+class Controller extends ControllerInterface
 {
     private $var = [];
 
