@@ -8,7 +8,7 @@
 
 namespace Libs\Http;
 
-abstract class ControllerInterface
+interface ControllerInterface
 {
 
 }

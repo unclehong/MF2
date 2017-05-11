@@ -11,33 +11,16 @@ namespace MF;
 use Libs\Http\ControllerInterface;
 use Libs\Response;
 
-class Controller extends ControllerInterface
+class Controller implements ControllerInterface
 {
+
     private $var = [];
-
-    /**
-     * 分配数据
-     */
-    public function assign($name='',$value='')
-    {
-        if(is_array($name))
-        {
-            $this->var = array_merge($this->var,$name);
-        }else
-        {
-            $this->var[$name] = $value;
-        }
-
-        return $this->var;
-    }
 
     /**
      * 渲染模板
      */
-    public function render($viewpath = '')
+    public function render($viewpath = '',$data = [])
     {
-        extract($this->assign());
-
         if($_SERVER['PATH_INFO'])
         {
             $arr = explode('/',$_SERVER['PATH_INFO']);$m = $arr[1];
@@ -46,15 +29,12 @@ class Controller extends ControllerInterface
             $m = 'admin';
         }
 
-        include BASEPATH . '/../src/'.ucfirst($m).'/View/'.$viewpath.'.php';
-    }
+        $loader = new \Twig_Loader_Filesystem(BASEPATH . '/../src/'.ucfirst($m).'/View');
+        $twig = new \Twig_Environment($loader,[
+            'cache' => BASEPATH . '/../bootstrap/cache/view',
+        ]);
 
-    /**
-     * set魔术方法
-     */
-    public function __set($name, $value)
-    {
-        $this->assign($name,$value);
+        echo $twig->render($viewpath.'.php',$data);
     }
 
     /**

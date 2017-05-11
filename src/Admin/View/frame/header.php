@@ -80,12 +80,14 @@
     </div><!--topheader-->
 
 
+    <?= $item; ?>
+
     <div class="header">
         <ul class="headermenu">
-            <li class="<?php echo $item === 'frame' ? 'current': ''?>"><a href="/"><span class="icon icon-flatscreen"></span>首页</a></li>
+            <li class="<?= $item === 'frame' ? 'current' : '';?>"><a href="/"><span class="icon icon-flatscreen"></span>首页</a></li>
             <li><a href="manageblog.html"><span class="icon icon-pencil"></span>四级试题</a></li>
             <li><a href="manageblog.html"><span class="icon icon-pencil"></span>四级单词</a></li>
-            <li><a href="/admin/member/index"><span class="icon icon-message"></span>会员管理</a></li>
+            <li class="<?= $item === 'member' ? 'current' : '';?>"><a href="/admin/member/index"><span class="icon icon-message"></span>会员管理</a></li>
             <li><a href="reports.html"><span class="icon icon-chart"></span>统计报表</a></li>
         </ul>
 

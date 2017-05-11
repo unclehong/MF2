@@ -7,7 +7,7 @@
 
         <div id="contentwrapper" class="contentwrapper">
 
-            <p>content</p>
+            <p>{{ item }}</p>
 
         </div><!--contentwrapper-->
 

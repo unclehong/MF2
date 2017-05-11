@@ -12,5 +12,8 @@ use MF\Controller;
 
 class FrameController extends Controller
 {
-
+    public function index()
+    {
+        return $this->render('frame/index',['item' => 'frame']);
+    }
 }
