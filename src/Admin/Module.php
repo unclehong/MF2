@@ -18,7 +18,6 @@ class Module
 {
     static public function createController()
     {
-        Register::bind('admin_base',ControllerFactory::make(BaseController::class));
         Register::bind('admin_frame',ControllerFactory::make(FrameController::class));
         Register::bind('admin_member',ControllerFactory::make(MemberController::class));
     }

@@ -12,7 +12,6 @@ use MF\Controller;
 
 class MemberController extends Controller
 {
-
     public function index()
     {
         return $this->render('member/index',['item' => 'member']);

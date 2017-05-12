@@ -34,7 +34,7 @@ class Controller implements ControllerInterface
             'cache' => BASEPATH . '/../bootstrap/cache/view',
         ]);
 
-        echo $twig->render($viewpath.'.php',$data);
+        echo $twig->render($viewpath.'.twig',$data);
     }
 
     /**
