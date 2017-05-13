@@ -16,4 +16,9 @@ class MemberController extends Controller
     {
         return $this->render('member/index',['item' => 'member']);
     }
+
+    public function member_lists()
+    {
+
+    }
 }

@@ -3,17 +3,17 @@
  * Created by PhpStorm.
  * User: ming
  * Date: 17-5-12
- * Time: 上午11:14
+ * Time: 下午4:01
  */
 
 namespace MF\Admin\Controller;
 
 use MF\Controller;
 
-class WordController extends Controller
+class DataController extends Controller
 {
     public function index()
     {
-        return $this->render('word/index',['item' => 'word']);
+        return $this->render('data/index',['item' => 'data']);
     }
 }

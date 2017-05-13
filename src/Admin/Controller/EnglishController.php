@@ -12,5 +12,8 @@ use MF\Controller;
 
 class EnglishController extends Controller
 {
-
+    public function index()
+    {
+        return $this->render('english/index',['item' => 'english']);
+    }
 }

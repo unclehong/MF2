@@ -1,6 +1,107 @@
 {% extends "layouts/base.twig" %}
+{% block js %}
+
+    <script type="text/javascript" src="/resource/js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/resource/js/custom/tables.js"></script>
+
+
+{% endblock %}
 {% block content %}
 
-    {{ item }}
+    <div class="centercontent tables">
+
+
+        <div id="contentwrapper" class="contentwrapper">
+
+            <div class="contenttitle2">
+                <h3>Table with Quick Edit/View</h3>
+            </div><!--contenttitle-->
+
+            <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablequick">
+                <colgroup>
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="head0">Rendering engine</th>
+                    <th class="head1">Browser</th>
+                    <th class="head0">Platform(s)</th>
+                    <th class="head1">Engine version</th>
+                    <th class="head0">CSS grade</th>
+                    <th class="head1">&nbsp;</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th class="head0">Rendering engine</th>
+                    <th class="head1">Browser</th>
+                    <th class="head0">Platform(s)</th>
+                    <th class="head1">Engine version</th>
+                    <th class="head0">CSS grade</th>
+                    <th class="head1">&nbsp;</th>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <td class="con0">Trident</td>
+                    <td class="con1">Internet Explorer 4.0</td>
+                    <td class="con0">Win 95+</td>
+                    <td class="center">4</td>
+                    <td class="center">X</td>
+                    <td class="center"><a href="ajax/blog/quickedit.html" class="toggle">Quick View</a></td>
+                </tr>
+                <tr>
+                    <td>Trident</td>
+                    <td>Internet Explorer 5.0</td>
+                    <td>Win 95+</td>
+                    <td class="center">5</td>
+                    <td class="center">C</td>
+                    <td class="center"><a href="ajax/blog/quickedit.html" class="toggle">Quick View</a></td>
+                </tr>
+                <tr>
+                    <td>Trident</td>
+                    <td>Internet  Explorer 5.5</td>
+                    <td>Win 95+</td>
+                    <td class="center">5.5</td>
+                    <td class="center">A</td>
+                    <td class="center"><a href="ajax/blog/quickedit.html" class="toggle">Quick View</a></td>
+                </tr>
+                <tr>
+                    <td>Trident</td>
+                    <td>Internet Explorer 6</td>
+                    <td>Win 98+</td>
+                    <td class="center">6</td>
+                    <td class="center">A</td>
+                    <td class="center"><a href="ajax/blog/quickedit.html" class="toggle">Quick View</a></td>
+                </tr>
+                <tr>
+                    <td>Trident</td>
+                    <td>Internet Explorer 7</td>
+                    <td>Win XP SP2+</td>
+                    <td class="center">7</td>
+                    <td class="center">A</td>
+                    <td class="center"><a href="ajax/blog/quickedit.html" class="toggle">Quick View</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </div><!--contentwrapper-->
+
+    </div><!-- centercontent -->
+
+
+
+
+
+
+
+
+
 
 {% endblock %}
